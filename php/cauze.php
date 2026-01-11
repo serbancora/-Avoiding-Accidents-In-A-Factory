@@ -1,0 +1,21 @@
+<?php
+session_start();
+include "../connect.php";
+include "_auth.php";
+
+require_roles(['admin','ssm']);
+$page_title = "Cauze – SafeFactory";
+
+include "_layout_top.php";
+include "_sidebar.php";
+?>
+
+<div class="main-content">
+    <h1>Cauze</h1>
+
+    <div class="info-box">
+        <p>Admin/SSM: aici vei gestiona cauzele accidentelor (CRUD ulterior).</p>
+    </div>
+</div>
+
+<?php include "_layout_bottom.php"; ?>
