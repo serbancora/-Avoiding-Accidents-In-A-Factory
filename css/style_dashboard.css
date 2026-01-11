@@ -5,45 +5,6 @@ body {
     display: flex;
 }
 
-.sidebar {
-    width: 250px;
-    background: #2b5876;
-    color: white;
-    height: 100vh;
-    padding-top: 20px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-    position: fixed;
-}
-
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 22px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 15px 20px;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background: rgba(255,255,255,0.15);
-    padding-left: 30px;
-    border-radius: 6px;
-}
-
 .main-content {
     margin-left: 250px;
     padding: 40px;
@@ -218,4 +179,202 @@ body {
     cursor: not-allowed;
 }
 
+/* =========================
+   DELETE BUTTON (Danger)
+========================= */
 
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #f5f6fa;
+    display: flex;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    width: calc(100% - 250px);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th {
+    background: #2b5876;
+    color: white;
+    padding: 12px;
+    border-bottom: 2px solid #1f3a52;
+}
+
+.data-table td {
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* linii verticale între coloane */
+.data-table th, .data-table td {
+    border-right: 1px solid #d0d0d0;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+    border-right: none;
+}
+
+/* ---- aranjarea butoanelor de acțiuni ---- */
+
+.action-cell {
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;           /* distanță între butoane */
+}
+
+.action-cell {
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* buton "bază" (pentru a + span) */
+.btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1;
+    white-space: nowrap;
+    border: none;
+}
+
+/* edit */
+.btn-edit {
+    background: #4e83ff;
+}
+
+.btn-edit:hover {
+    background: #2c64e6;
+}
+
+/* delete */
+.btn-delete {
+    background: #ff4e4e;
+    cursor: pointer
+}
+
+.btn-delete:hover {
+    background: #d93b3b;
+}
+
+/* disabled (același aspect, doar gri) */
+.btn-disabled {
+    background: #9aa5b1;
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.muted {
+    color: #9aa5b1;
+    font-weight: 600;
+}
+
+/* ---- INFO BOX ---- */
+
+.info-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.info-box h2 {
+    margin-top: 0;
+    color: #2b5876;
+}
+
+.info-box ul {
+    padding-left: 20px;
+}
+
+.info-box ul li {
+    margin-bottom: 8px;
+}
+
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 520px;
+}
+
+.form-card label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-card input, .form-card select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfd6df;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.alert {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 12px 14px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    border-radius: 8px;
+    max-width: 900px;
+}
+
+.btn-disabled {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #ffffff;
+    background: #9aa5b1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* =========================
+   DELETE BUTTON (Danger)
+========================= */
+
+/* DELETE - compatibil cu .btn */
+.btn.btn-danger {
+    background: #ff4e4e !important;
+    color: #fff !important;
+}
+
+.btn.btn-danger:hover {
+    background: #d93b3b !important;
+}
